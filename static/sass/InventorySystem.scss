@@ -1,5 +1,5 @@
 $main_color: #ff8e32;
-
+$secondary_color: rgb(255, 195, 138);
 header{
     height: 100vh;
     width: 100%;
@@ -28,7 +28,7 @@ header{
         font-size:4rem;
     }
     h2{
-        color:rgb(255, 195, 138);
+        color:$secondary_color;
         margin-bottom: .5rem;
     }
     width: 100%;
@@ -36,8 +36,20 @@ header{
 
 .navbar{
     z-index: 999;
-    position: absolute;
+    
     bottom: 0;
     left: 0;
     width: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.btn-print{
+    background-color:$secondary_color;
+    &:hover{
+        background-color:$main_color;
+    }
 }
