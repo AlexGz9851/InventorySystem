@@ -17,37 +17,125 @@
             <button type='button' class='btn btn-outline-warning btn-xlarge'>Enter</button>
         </div>
     </header>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light white-text"> <!-- bg-light -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light white-text">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Title 1</a>
+                    <a class="nav-link" href="#generalContext">Project Context</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Title 2</a>
+                    <a class="nav-link" href="#userAnalysis">User Analysis</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Title 3</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-warning my-2 my-sm-0" type="button">Print Info</button>
+                <button class="btn btn-outline-warning my-2 my-sm-0" type="button">Print Project info</button>
             </form>
         </div>
     </nav>
-    <div class'container'>
-        <div class='row'>
-            <div class='col-xl-12'>
-                <h2>Some content</h2>
+    <div id="generalContext">
+        <div class='container' >
+            <div class='row'>
+                <div class='col-xl-12 text-center'>
+                    <h2>Project Context</h2>
+                    <hr>
+                </div>
             </div>
-            <div class='col-xl-4 col-sm-12'>
-                <div class='card'></div>
+            <div class='row'>
+                <div class='col-xl-12'>
+                    <h3><strong>Client</strong>: Professor Alejandro Villicaña</h3>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-xl-12'>
+                    <div class='card-deck'>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h3 class="card-title">General context</h3>
+                                <p class="card-text"> The IT area under supervision of our client has to implement an inventory of the technological infrastructure under the supervision of our client. The institutions under his control are Guadalajara´s, Santa Anita´s and Colima´s campus. The inventory is made by hand and annually.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h3 class="card-title">Problem</h3>
+                                <p class="card-text"> The work of inventory tends to be a tedious activity, in which is not easily accessible update information about the devices they have, their state or end of warrant date. This process is slow, and it tends to end with an incorrect final work because of the loss of information in the process.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h3 class="card-title">Goal</h3>
+                                <p class="card-text"> Develop a system for the register, control, and query of costs, warrants, location and problems of the inventory.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <div id="userAnalysis">
+        <div class='container' >
+            <div class='row'>
+                <div class='col-xl-12 text-center'>
+                    <h2>User Analysis</h2>
+                    <hr>
+                </div>
+                <p>
+                    <strong>Final user</strong>: Alejandro Villicaña Professor and his tech team.
+                </p>
+                <p>
+                    <strong>User profile</strong>: This user use computers and technology on a daily basis. They work on an ITESM campus as technicians. So we can conclude that our final user is an avid user of technology.
+                </p>
+                <h3>User scenarios:</h3>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+                        <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Not our client or his team</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>The curious user, the one that arrives to the website by accident, can see the content of the landing page. He would not have access to another part of the system.</p>
+                        </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+                        <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">The team of Professor Villicaña</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>The tech specialized on the technological installation, once identified on the log-in, would have access to the inventory control page.</p>
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-credit-card"></i></div>
+                        <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Professor Villicaña</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Besides the same habilities as his team, he would access to the user control site.</p>
+                        </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class='container'>
+            <div class='row'>
+                <div class'col-xl-12 text-center'><p>Copyright Iván Morett & Alejandro Gonzales</p></div>
+            </div>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="static/js/bootstrap.min.js"></script>
