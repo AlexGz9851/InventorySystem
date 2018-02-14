@@ -47,9 +47,6 @@ header{
     font-size: 1.2rem;
 }
 
-.btn-print{
-    background-color:$secondary_color;
-    &:hover{
-        background-color:$main_color;
-    }
+.btn-xlarge {
+    font-size: 1.6rem; //change this to your desired size
 }
