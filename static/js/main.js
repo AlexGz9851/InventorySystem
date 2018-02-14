@@ -1,4 +1,5 @@
 var navbar = document.querySelector('.navbar');
+var printButton = document.getElementById('print');
 
 // When the user scrolls the page, execute checkPositions
 window.onscroll = function() {checkPositions()}
@@ -14,3 +15,5 @@ function checkPositions() {
         navbar.classList.add("bg-light")
     }
 } 
+
+printButton.onclick = function(){ window.print(); }
