@@ -49,23 +49,23 @@ var myLineChart = new Chart(ctx, {
   }
 });
 // -- Bar Chart Example
-var ctx = document.getElementById("myBarChart");
-var myLineChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ["January", "February", "March", "April", "May", "June"],
-    datasets: [{
-      label: "Revenue",
-      backgroundColor: "rgba(2,117,216,1)",
-      borderColor: "rgba(2,117,216,1)",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
-    }],
+var ctx=document.getElementById("myBarChart");
+var myLineChart=new Chart(ctx,{
+  type:"bar",
+  data:{
+    labels:["Aulas 1","Aulas 2","Aulas 3","Aulas 4","Aulas 5","Aulas 6"],
+    datasets:[{
+      label:"Revenue",
+      backgroundColor:"rgba(2,117,216,1)",
+      borderColor:"rgba(2,117,216,1)",
+      data:[34,53,25,41,21,18]
+    }]
   },
-  options: {
-    scales: {
-      xAxes: [{
-        time: {
-          unit: 'month'
+  options:{
+    scales:{
+      xAxes:[{
+        time:{
+          unit:""
         },
         gridLines: {
           display: false
@@ -77,7 +77,7 @@ var myLineChart = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 15000,
+          max: 100,
           maxTicksLimit: 5
         },
         gridLines: {
