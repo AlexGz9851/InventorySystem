@@ -241,6 +241,11 @@ hr{
     padding: 1rem 0;
 }
 
+#extra{
+    background-color: rgb(245, 245, 245);
+    padding: 1rem 0;
+}
+
 @page {
     size: letter;
     margin: 2.54cm 2cm;
@@ -260,7 +265,7 @@ hr{
     nav, #enterBtn{
         display: none;
     }
-    #requirements, #generalContext{
+    #requirements, #generalContext, #extra{
         background-color: white;
     }
 
