@@ -1,4 +1,6 @@
 import React from 'react'
+import FontAwesome from 'react-fontawesome';
+import MenuItem from './MenuItem';
 
 const Menu = () => {    
     return (
@@ -9,42 +11,22 @@ const Menu = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarResponsive">
                 <ul className="navbar-nav navbar-sidenav" id="exampleAccordion">
-                    <li className="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                        <a className="nav-link" href="">
-                            <i className="fa fa-fw fa-dashboard"></i>
-                            <span className="nav-link-text">Dashboard</span>
-                        </a>
-                    </li>
-                    <li className="nav-item" data-toggle="tooltip" data-placement="right" title="Inventory">
-                        <a className="nav-link" href="#">
-                            <i className="fa fa-fw fa-area-chart"></i>
-                            <span className="nav-link-text">Inventory</span>
-                        </a>
-                    </li>
-                    <li className="nav-item" data-toggle="tooltip" data-placement="right" title="Locations">
-                        <a className="nav-link" href="#">
-                            <i className="fa fa-fw fa-table"></i>
-                            <span className="nav-link-text">Locations</span>
-                        </a>
-                    </li>
-                    <li className="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-                        <a className="nav-link "  href="#">
-                            <i className="fa fa-fw fa-wrench"></i>
-                            <span className="nav-link-text">Users</span>
-                        </a>
-                    </li>
+                    <MenuItem title="Dashboard" text="Dashboard" link="" icon="dashboard"/>
+                    <MenuItem title="Inventory" text="Inventory" link="" icon="area-chart"/>
+                    <MenuItem title="Locations" text="Locations" link="" icon="table"/>
+                    <MenuItem title="Components" text="Components" link="" icon="wrench"/>
                 </ul>
                 <ul className="navbar-nav sidenav-toggler">
                     <li className="nav-item">
                         <a className="nav-link text-center" id="sidenavToggler">
-                            <i className="fa fa-fw fa-angle-left"></i>
+                            <FontAwesome name="angle-left"/>
                         </a>
                     </li>
                 </ul>
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
                         <a className="nav-link" data-toggle="modal" data-target="#exampleModal">
-                            <i className="fa fa-fw fa-sign-out"></i>Logout
+                            <FontAwesome name="sign-out"/>&nbsp;Logout
                         </a>
                     </li>
                 </ul>

@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import Card from '../common/Card';
+import ImportantButton from '../common/ImportantButton';
 import ReactTable from 'react-table';
 import PropTypes from 'prop-types';
+import {Bar, Line, Pie} from 'react-chartjs-2';
+
 import "react-table/react-table.css";
 
 class HomePage extends Component {
@@ -14,70 +17,10 @@ class HomePage extends Component {
         return (
             <div>
                 <div className="row">
-                    <div className="col-xl-3 col-sm-6 mb-3">
-                        <div className="card text-white bg-primary o-hidden h-100" >
-                            <div className="card-body">
-                                <div className="card-body-icon">
-                                    <i className="fa fa-fw fa-comments"></i>
-                                </div>
-                                <div className="mr-5">26 New Messages!</div>
-                            </div>
-                            <a className="card-footer text-white clearfix small z-1" href="#">
-                                <span className="float-left">View Details</span>
-                                <span className="float-right">
-                                    <i className="fa fa-angle-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="col-xl-3 col-sm-6 mb-3">
-                        <div className="card text-white bg-warning o-hidden h-100" >
-                            <div className="card-body">
-                                <div className="card-body-icon">
-                                    <i className="fa fa-fw fa-list"></i>
-                                </div>
-                                <div className="mr-5">11 New Tasks!</div>
-                            </div>
-                            <a className="card-footer text-white clearfix small z-1" href="#">
-                                <span className="float-left">View Details</span>
-                                <span className="float-right">
-                                    <i className="fa fa-angle-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="col-xl-3 col-sm-6 mb-3">
-                        <div className="card text-white bg-success o-hidden h-100" >
-                            <div className="card-body">
-                                <div className="card-body-icon">
-                                    <i className="fa fa-fw fa-shopping-cart"></i>
-                                </div>
-                                <div className="mr-5">123 New Orders!</div>
-                            </div>
-                            <a className="card-footer text-white clearfix small z-1" href="#">
-                                <span className="float-left">View Details</span>
-                                <span className="float-right">
-                                    <i className="fa fa-angle-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="col-xl-3 col-sm-6 mb-3">
-                        <div className="card text-white bg-danger o-hidden h-100" >
-                            <div className="card-body">
-                                <div className="card-body-icon">
-                                    <i className="fa fa-fw fa-support"></i>
-                                </div>
-                                <div className="mr-5">13 New Tickets!</div>
-                            </div>
-                            <a className="card-footer text-white clearfix small z-1" href="#">
-                                <span className="float-left">View Details</span>
-                                <span className="float-right">
-                                    <i className="fa fa-angle-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>  
+                    <ImportantButton color="#0072ed" text="Hey, something" size={3} icon="comments"/>
+                    <ImportantButton color="#ffc107" text="Another thing!" size={3} icon="list"/>
+                    <ImportantButton color="#28a745" text="Look out!" size={3} icon="shopping-cart"/>
+                    <ImportantButton color="#dc3545" text="Just kidding!" size={3} icon="support"/>
                 </div>
       
                 <div className="card mb-3">
@@ -85,7 +28,50 @@ class HomePage extends Component {
                         <i className="fa fa-area-chart"></i> Units in Inventory
                     </div>
                     <div className="card-body">
-                        <canvas id="myAreaChart" width="100%" height="30"></canvas>
+                        <Line data={{
+                                            labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "Octuber", "November", "December"],
+                                            datasets: [
+                                                {
+                                                    label: "Sessions",
+                                                    lineTension: 0.3,
+                                                    backgroundColor:"rgba(218, 150, 87,0.3)",
+                                                    borderColor:"rgba(218, 150, 87,1)",
+                                                    pointRadius:5,pointBackgroundColor:"rgba(231, 128, 44,1)",
+                                                    pointHitRadius: 20,
+                                                    pointBorderWidth: 2,
+                                                    data: [154, 289, 262, 218, 233, 228, 220, 214, 203, 233, 221, 189],
+                                                }
+                                            ]
+                                        }
+                                    }
+                                options = {{
+                                    scales: {
+                                      xAxes: [{
+                                        time: {
+                                          unit: 'date'
+                                        },
+                                        gridLines: {
+                                          display: false
+                                        },
+                                        ticks: {
+                                          maxTicksLimit: 7
+                                        }
+                                      }],
+                                      yAxes: [{
+                                        ticks: {
+                                          min: 0,
+                                          max: 400,
+                                          maxTicksLimit: 5
+                                        },
+                                        gridLines: {
+                                          color: "rgba(0, 0, 0, .125)",
+                                        }
+                                      }],
+                                    },
+                                    legend: {
+                                      display: false
+                                    }
+                                  }} height={50} />
                     </div>
                     <div className="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
                 </div>
@@ -93,7 +79,44 @@ class HomePage extends Component {
                     <Card col={8} date="Updated yesterday at 11:59 PM" title="Locations">
                         <div className="row">
                             <div className="col-sm-8 my-auto">
-                                <canvas id="myBarChart" width="100" height="50"></canvas>
+                                <Bar data={{
+                                                labels:["Aulas 1","Aulas 2","Aulas 3","Aulas 4","Aulas 5","Aulas 6"],
+                                                datasets:[{
+                                                label:"Revenue",
+                                                backgroundColor:"rgba(2,117,216,1)",
+                                                borderColor:"rgba(2,117,216,1)",
+                                                data:[34,53,25,41,21,18]
+                                                }]
+                                            }}
+                                        options={{
+                                              scales:{
+                                                xAxes:[{
+                                                  time:{
+                                                    unit:""
+                                                  },
+                                                  gridLines: {
+                                                    display: false
+                                                  },
+                                                  ticks: {
+                                                    maxTicksLimit: 6
+                                                  }
+                                                }],
+                                                yAxes: [{
+                                                  ticks: {
+                                                    min: 0,
+                                                    max: 100,
+                                                    maxTicksLimit: 5
+                                                  },
+                                                  gridLines: {
+                                                    display: true
+                                                  }
+                                                }],
+                                              },
+                                              legend: {
+                                                display: false
+                                              }
+                                            }}
+                                    />
                             </div>
                             <div className="col-sm-4 text-center my-auto">
                                 <div className="h4 mb-0 text-primary">33</div>
@@ -108,7 +131,13 @@ class HomePage extends Component {
                         </div>
                     </Card>
                     <Card col={4} title={"Projector's State"} date="Updated yesterday at 11:59 PM" ico="fa fa-pie-chart">
-                        <canvas id="myPieChart" width="100%" height="100"></canvas>
+                        <Pie data={{
+                                    labels: ["Decomposed Projectors", "Proyectors without Waranty", "Projectors with Waranty"],
+                                    datasets: [{
+                                        data: [ 34, 156, 47],
+                                        backgroundColor: [ '#dc3545', '#ffc107', '#28a745']
+                                    }]
+                                }}/>
                     </Card>
                     <div className="saltoDePagina"></div>
                     <Card col={12} title={"Inventory History"} date="Updated yesterday at 11:59 PM" ico="fa fa-table">
