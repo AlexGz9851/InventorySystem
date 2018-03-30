@@ -76,25 +76,27 @@ class LandingPage extends React.Component{
                             </div>
                         </div>
                         <div className='row'>
-                            <div className='col-xl-12'>
-                                <div className='card-deck'>
-                                    <div className="card" style={{width:18+'rem'}}>
-                                        <div className="card-body">
-                                            <h3 className="card-title">General context</h3>
-                                            <p className="card-text"> The IT area under supervision of our client has to implement an inventory of the technological infrastructure under the supervision of our client. The institutions under his control are Guadalajara´s, Santa Anita´s and Colima´s campus. The inventory is made by hand and annually.</p>
-                                        </div>
+                            <div className='col-xl-4'>
+                                <div className="card">
+                                    <div className="card-body">
+                                        <h3 className="card-title">General context</h3>
+                                        <p className="card-text"> The IT area under supervision of our client has to implement an inventory of the technological infrastructure under the supervision of our client. The institutions under his control are Guadalajara´s, Santa Anita´s and Colima´s campus. The inventory is made by hand and annually.</p>
                                     </div>
-                                    <div className="card" style={{width:18+'rem'}}>
-                                        <div className="card-body">
-                                            <h3 className="card-title">Problem</h3>
-                                            <p className="card-text"> The work of inventory tends to be a tedious activity, in which is not easily accessible update information about the devices they have, their state or end of warrant date. This process is slow, and it tends to end with an incorrect final work because of the loss of information in the process.</p>
-                                        </div>
+                                </div>
+                            </div>
+                            <div className='col-xl-4'>
+                                <div className="card">
+                                    <div className="card-body">
+                                        <h3 className="card-title">Problem</h3>
+                                        <p className="card-text"> The work of inventory tends to be a tedious activity, in which is not easily accessible update information about the devices they have, their state or end of warrant date. This process is slow, and it tends to end with an incorrect final work because of the loss of information in the process.</p>
                                     </div>
-                                    <div className="card" style={{width:18+'rem'}}>
-                                        <div className="card-body">
-                                            <h3 className="card-title">Goal</h3>
-                                            <p className="card-text"> Develop a system for the register, control, and query of costs, warrants, location and problems of the inventory.</p>
-                                        </div>
+                                </div>
+                            </div>
+                            <div className='col-xl-4'>
+                                <div className="card">
+                                    <div className="card-body">
+                                        <h3 className="card-title">Goal</h3>
+                                        <p className="card-text"> Develop a system for the register, control, and query of costs, warrants, location and problems of the inventory.</p>
                                     </div>
                                 </div>
                             </div>
