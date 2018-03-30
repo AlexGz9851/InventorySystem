@@ -1,5 +1,5 @@
-$main_color: #e7802c;
-$secondary_color: rgb(218, 150, 87);
+$main_color: #e07925;
+$secondary_color: #c98546;
 
 #landingPage{
   header{
@@ -21,6 +21,10 @@ $secondary_color: rgb(218, 150, 87);
       position: absolute;
   }
 
+
+  #extra a{
+    color:#006de1;
+  }
   .content{
       display: table-cell;
       vertical-align: middle;
@@ -51,9 +55,14 @@ $secondary_color: rgb(218, 150, 87);
   }
 
   .btn-xlarge {
+      color: #bd8d00;
       font-size: 1.6rem;
   }
 
+  .btn-print{
+      color:#977000;
+      background-color: #feffff;
+  }
   h2{
       font-size:2rem;
   }
@@ -184,6 +193,7 @@ $secondary_color: rgb(218, 150, 87);
       .timeline-title {
           margin-top: 0;
           color: inherit;
+          font-size: 1.5rem;
       }
 
       .timeline-body > p,
@@ -352,4 +362,55 @@ $secondary_color: rgb(218, 150, 87);
 @page {
   size: letter;
   margin: 2.54cm 2cm;
+}
+
+#login{
+    .card-header{
+        color: #717579;
+    }
+    .btn-primary{
+        background-color: #0072ed !important;
+    }
+    .hidden{
+        visibility: hidden;
+        display: none;
+    }
+}
+
+#dashboard{
+    .card-header{
+        color: #717579; //
+    }
+    .card-footer{
+        color: #6d767e !important;
+    }
+    .text-warning{
+        color: #bd8d00 !important;
+    }
+    .-odd{
+        .rt-td{
+            color: #717579 !important;
+        }
+    }
+    .-even{
+        .rt-dt{
+            color: #717579 !important;
+        }
+    }
+    .-next{
+        .-btn{
+            color:#757575 !important;
+        }
+    }
+    .-pageSizeOptions{
+        option{
+            color:#0078d6 !important;
+        }
+    }
+
+    #toTop{
+        transition: display 1s;
+        -moz-transition: display 1s;
+        -o-transition: display 1s;
+    }
 }

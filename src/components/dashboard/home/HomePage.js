@@ -18,62 +18,57 @@ class HomePage extends Component {
             <div>
                 <div className="row">
                     <ImportantButton color="#0072ed" text="Hey, something" size={3} icon="comments"/>
-                    <ImportantButton color="#ffc107" text="Another thing!" size={3} icon="list"/>
-                    <ImportantButton color="#28a745" text="Look out!" size={3} icon="shopping-cart"/>
+                    <ImportantButton color="#967100" text="Another thing!" size={3} icon="list"/>
+                    <ImportantButton color="#0a8927" text="Look out!" size={3} icon="shopping-cart"/>
                     <ImportantButton color="#dc3545" text="Just kidding!" size={3} icon="support"/>
                 </div>
-      
-                <div className="card mb-3">
-                    <div className="card-header">
-                        <i className="fa fa-area-chart"></i> Units in Inventory
-                    </div>
-                    <div className="card-body">
+                <div className="row">
+                    <Card col={12} date="Updated yesterday at 11:59 PM" title="Units in Inventory">
                         <Line data={{
-                                            labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "Octuber", "November", "December"],
-                                            datasets: [
-                                                {
-                                                    label: "Sessions",
-                                                    lineTension: 0.3,
-                                                    backgroundColor:"rgba(218, 150, 87,0.3)",
-                                                    borderColor:"rgba(218, 150, 87,1)",
-                                                    pointRadius:5,pointBackgroundColor:"rgba(231, 128, 44,1)",
-                                                    pointHitRadius: 20,
-                                                    pointBorderWidth: 2,
-                                                    data: [154, 289, 262, 218, 233, 228, 220, 214, 203, 233, 221, 189],
-                                                }
-                                            ]
+                                                labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "Octuber", "November", "December"],
+                                                datasets: [
+                                                    {
+                                                        label: "Sessions",
+                                                        lineTension: 0.3,
+                                                        backgroundColor:"rgba(218, 150, 87,0.3)",
+                                                        borderColor:"rgba(218, 150, 87,1)",
+                                                        pointRadius:5,pointBackgroundColor:"rgba(231, 128, 44,1)",
+                                                        pointHitRadius: 20,
+                                                        pointBorderWidth: 2,
+                                                        data: [154, 289, 262, 218, 233, 228, 220, 214, 203, 233, 221, 189],
+                                                    }
+                                                ]
+                                            }
                                         }
-                                    }
-                                options = {{
-                                    scales: {
-                                      xAxes: [{
-                                        time: {
-                                          unit: 'date'
+                                    options = {{
+                                        scales: {
+                                        xAxes: [{
+                                            time: {
+                                            unit: 'date'
+                                            },
+                                            gridLines: {
+                                            display: false
+                                            },
+                                            ticks: {
+                                            maxTicksLimit: 7
+                                            }
+                                        }],
+                                        yAxes: [{
+                                            ticks: {
+                                            min: 0,
+                                            max: 400,
+                                            maxTicksLimit: 5
+                                            },
+                                            gridLines: {
+                                            color: "rgba(0, 0, 0, .125)",
+                                            }
+                                        }],
                                         },
-                                        gridLines: {
-                                          display: false
-                                        },
-                                        ticks: {
-                                          maxTicksLimit: 7
+                                        legend: {
+                                        display: false
                                         }
-                                      }],
-                                      yAxes: [{
-                                        ticks: {
-                                          min: 0,
-                                          max: 400,
-                                          maxTicksLimit: 5
-                                        },
-                                        gridLines: {
-                                          color: "rgba(0, 0, 0, .125)",
-                                        }
-                                      }],
-                                    },
-                                    legend: {
-                                      display: false
-                                    }
-                                  }} height={50} />
-                    </div>
-                    <div className="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                                    }} height={50} />
+                    </Card>
                 </div>
                 <div className="row">
                     <Card col={8} date="Updated yesterday at 11:59 PM" title="Locations">
@@ -130,7 +125,7 @@ class HomePage extends Component {
                             </div>
                         </div>
                     </Card>
-                    <Card col={4} title={"Projector's State"} date="Updated yesterday at 11:59 PM" ico="fa fa-pie-chart">
+                    <Card col={4} title={"Projector's State"} date="Updated yesterday at 11:59 PM" ico="pie-chart">
                         <Pie data={{
                                     labels: ["Decomposed Projectors", "Proyectors without Waranty", "Projectors with Waranty"],
                                     datasets: [{
@@ -140,7 +135,7 @@ class HomePage extends Component {
                                 }}/>
                     </Card>
                     <div className="saltoDePagina"></div>
-                    <Card col={12} title={"Inventory History"} date="Updated yesterday at 11:59 PM" ico="fa fa-table">
+                    <Card col={12} title={"Inventory History"} date="Updated yesterday at 11:59 PM" ico="table">
                         <div className="table-responsive">
                             <ReactTable
                                 data={this.props.table.data}

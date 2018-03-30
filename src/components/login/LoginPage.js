@@ -17,17 +17,9 @@ class LoginPage extends Component {
                                 <label htmlFor="exampleInputPassword1">Password</label>
                                 <input className="form-control" id="exampleInputPassword1" type="password" placeholder="Password"/>
                             </div>
-                            <div className="form-group">
-                                <div className="form-check">
-                                    <input className="form-check-input" type="checkbox"/><label className="form-check-label"> Remember Password</label>
-                                </div>
-                            </div>
+                            <input type='submit' className='hidden' value="Submit"/>
                             <Link className="btn btn-primary btn-block" to="/dashboard">Login</Link>
                         </form>
-                        <div className="text-center">
-                            <a className="d-block small mt-3" href="register.html">Register an Account</a>
-                            <a className="d-block small" href="forgot-password.html">Forgot Password?</a>
-                        </div>
                     </div>
                 </div>
             </div>

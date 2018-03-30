@@ -7,7 +7,7 @@ import { Switch, Route } from 'react-router-dom';
 class DashboardPage extends Component {
     render() {
         return (
-            <div className="content-wrapper">
+            <div className="content-wrapper" id='dashboard'>
                 <div className="container-fluid">
                     <Menu/>
                     <Switch>
