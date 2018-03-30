@@ -57,9 +57,9 @@ class LandingPage extends React.Component{
                                 <a className="nav-link" href="#extra">Extra information</a>
                             </li>
                         </ul>
-                        <form className="form-inline my-2 my-lg-0">
-                            <button className="btn btn-outline-warning my-2 my-sm-0" type="button" id='print' onClick={()=>{window.print();}}>Print Project info</button>
-                        </form>
+                        <div className="form-inline my-2 my-lg-0">
+                            <button className="btn btn-outline-warning my-2 my-sm-0 btn-print" id='print' onClick={()=>{window.print();}} type='button'>Print Project info</button>
+                        </div>
                     </div>
                 </nav>
                 <div id="generalContext">
@@ -120,7 +120,7 @@ class LandingPage extends React.Component{
                                     <div className="timeline-badge"><i className="glyphicon glyphicon-check"></i></div>
                                     <div className="timeline-panel">
                                     <div className="timeline-heading">
-                                        <h4 className="timeline-title">Not our client or his team</h4>
+                                        <p className="timeline-title">Not our client or his team</p>
                                     </div>
                                     <div className="timeline-body">
                                         <p>The curious user, the one that arrives to the website by accident, can see the content of the landing page. He would not have access to another part of the system.</p>
@@ -131,7 +131,7 @@ class LandingPage extends React.Component{
                                     <div className="timeline-badge warning"><i className="glyphicon glyphicon-credit-card"></i></div>
                                     <div className="timeline-panel">
                                     <div className="timeline-heading">
-                                        <h4 className="timeline-title">The team of Villicaña Professor</h4>
+                                        <p className="timeline-title">The team of Villicaña Professor</p>
                                     </div>
                                     <div className="timeline-body">
                                         <p>The tech specialized on the technological installation, once identified on the log-in, would have access to the inventory control page.</p>
@@ -142,7 +142,7 @@ class LandingPage extends React.Component{
                                     <div className="timeline-badge success"><i className="glyphicon glyphicon-credit-card"></i></div>
                                     <div className="timeline-panel">
                                     <div className="timeline-heading">
-                                        <h4 className="timeline-title">Professor Villicaña</h4>
+                                        <p className="timeline-title">Professor Villicaña</p>
                                     </div>
                                     <div className="timeline-body">
                                         <p>Besides the same habilities as his team, he would access to the user control site.</p>

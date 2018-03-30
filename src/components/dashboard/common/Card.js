@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import FontAwesome from 'react-fontawesome';
 
 const Card = ({children, col, title, ico, date}) => {
     return (
         <div className={"col-lg-" + col}>
             <div className="card mb-3">
                 <div className="card-header">
-                <i className={ico}></i>{title}</div>
+                <FontAwesome name={ico || "check"}/>&nbsp;{title}</div>
                 <div className="card-body">
                     {children}
                 </div>
