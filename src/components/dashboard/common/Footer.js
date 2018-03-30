@@ -27,8 +27,8 @@ class Footer extends React.Component {
                         </div>
                     </div>
                 </footer>
-                <a className="scroll-to-top rounded" href="#page-top" name='toTop' id='toTop'>
-                    <i className="fa fa-angle-up"></i>&nbsp;
+                <a className="scroll-to-top rounded" href="#page-top" name='toTop' alt='toTop' id='toTop'>
+                    <i className="fa fa-angle-up"></i><span style={{display:"none"}}>Top</span>
                 </a>
             </div>
         )

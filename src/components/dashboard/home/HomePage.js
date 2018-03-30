@@ -4,11 +4,15 @@ import ImportantButton from '../common/ImportantButton';
 import ReactTable from 'react-table';
 import PropTypes from 'prop-types';
 import {Bar, Line, Pie} from 'react-chartjs-2';
-
+import $ from 'jquery';
 import "react-table/react-table.css";
 
 class HomePage extends Component {
-    
+    componentDidMount(){
+        
+        $(".-pageJump input")["0"].setAttribute("title", "page");  
+        $(".-pageSizeOptions select")["0"].setAttribute("title", "aria-pageSize");  
+    }
     constructor(props, context){
         super(props,context);
     }

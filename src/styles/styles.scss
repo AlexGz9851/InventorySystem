@@ -402,15 +402,14 @@ $secondary_color: #c98546;
             color:#757575 !important;
         }
     }
-    .-pageSizeOptions{
-        option{
-            color:#0078d6 !important;
-        }
-    }
 
     #toTop{
         transition: display 1s;
         -moz-transition: display 1s;
         -o-transition: display 1s;
+    }
+
+    .navbar{
+        color: #9DA5AA !important;
     }
 }
