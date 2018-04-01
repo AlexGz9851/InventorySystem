@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 const MenuItem = ({title, text, link, icon}) => {
     return (
         <li className="nav-item" data-toggle="tooltip" data-placement="right" title={title}>
-            <Link className="nav-link" to={link}>
+            <Link className="nav-link" to={link} style={{color: "#9da5aa"}}>
                 <FontAwesome name={icon}/>
                 <span className="nav-link-text">&nbsp;{text}</span>
             </Link>
