@@ -21,10 +21,9 @@ class HomePage extends Component {
         return (
             <div>
                 <div className="row">
-                    <ImportantButton color="#0072ed" text="Hey, something" size={3} icon="comments"/>
-                    <ImportantButton color="#967100" text="Another thing!" size={3} icon="list"/>
-                    <ImportantButton color="#0a8927" text="Look out!" size={3} icon="shopping-cart"/>
-                    <ImportantButton color="#dc3545" text="Just kidding!" size={3} icon="support"/>
+                    <ImportantButton color="#0072ed" text="Add a new projector" size={3} icon="plus-circle"/>
+                    <ImportantButton color="#0a8927" text="Report a change" size={3} icon="list"/>
+                    <ImportantButton color="#dc3545" text="Delete a projector" size={3} icon="minus-circle"/>
                 </div>
                 <div className="row">
                     <Card col={12} date="Updated yesterday at 11:59 PM" title="Units in Inventory">
@@ -32,7 +31,7 @@ class HomePage extends Component {
                                                 labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "Octuber", "November", "December"],
                                                 datasets: [
                                                     {
-                                                        label: "Sessions",
+                                                        label: "Projectors",
                                                         lineTension: 0.3,
                                                         backgroundColor:"rgba(218, 150, 87,0.3)",
                                                         borderColor:"rgba(218, 150, 87,1)",
@@ -131,7 +130,7 @@ class HomePage extends Component {
                     </Card>
                     <Card col={4} title={"Projector's State"} date="Updated yesterday at 11:59 PM" ico="pie-chart">
                         <Pie data={{
-                                    labels: ["Decomposed Projectors", "Proyectors without Waranty", "Projectors with Waranty"],
+                                    labels: ["Decomposed Projectors", "Projectors without Warranty", "Projectors with Waranty"],
                                     datasets: [{
                                         data: [ 34, 156, 47],
                                         backgroundColor: [ '#dc3545', '#ffc107', '#28a745']
