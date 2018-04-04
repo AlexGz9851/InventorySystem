@@ -21,9 +21,9 @@ class HomePage extends Component {
         return (
             <div>
                 <div className="row">
-                    <ImportantButton color="#0072ed" text="Add a new projector" size={3} icon="plus-circle"/>
-                    <ImportantButton color="#0a8927" text="Report a change" size={3} icon="list"/>
-                    <ImportantButton color="#dc3545" text="Delete a projector" size={3} icon="minus-circle"/>
+                    <ImportantButton color="#0072ed" text="Add a new projector" size={4} icon="plus-circle"/>
+                    <ImportantButton color="#0a8927" text="Report a change" size={4} icon="list"/>
+                    <ImportantButton color="#dc3545" text="Delete a projector" size={4} icon="minus-circle"/>
                 </div>
                 <div className="row">
                     <Card col={12} date="Updated yesterday at 11:59 PM" title="Units in Inventory">
